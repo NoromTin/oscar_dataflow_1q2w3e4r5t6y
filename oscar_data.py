@@ -165,7 +165,6 @@ def send_status_to_telegram():
     if tg_message:=Variable.get('oscar_flow_state') == '':
         tg_message = 'oscar data flow good' 
 
-     неоднозначно но чтобы не хардкодить здесь
     conn_info       = BaseHook.get_connection('telegram_allert')
     user_id         = conn_info.login # dba tg user id
     bot_token       = conn_info.password
