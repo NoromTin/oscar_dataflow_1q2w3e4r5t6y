@@ -101,8 +101,8 @@ def get_data():
         movie_directors += [(name, director) for director in directors]
         movie_stars     += [(name, star) for star in stars]
 
-        directors       += list(set([r[1] for r in movie_directors]))
-        stars           += list(set([r[1] for r in movie_stars]]))
+    directors       += list(set([r[1] for r in movie_directors]))
+    stars           += list(set([r[1] for r in movie_stars]]))
 
     # insert data
     execute_values(pg_cursor, f'''INSERT INTO src.oscar_directors("name")
